@@ -418,5 +418,3 @@ while (heroesTeam.heroes.count + heroesTeam.wizards.count > 0 && heroesTeam.step
         print("Игра закончена, герои и маги проиграли")
     }
 }
-
-
