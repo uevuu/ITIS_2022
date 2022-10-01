@@ -9,3 +9,5 @@ https://www.figma.com/file/ixe7KnsqQUqHIBcj55X3jv/Untitled?node-id=0%3A1
     * по нажатию на “Animal images” появляется модалка с какой-нибудь картинкой из Assets
 4. Второй таб — {tab: exit} — экран, на котором пишется ваш юзернейм и есть кнопка, которая
 закрывает модально показанный таб бар
+
+Чтобы показать алерт, вам пригодится [UIAlertController](https://developer.apple.com/documentation/uikit/uialertcontroller)
