@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CfU-nA-Izv">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ViewController-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="UIKitBasics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aYg-xm-VsY">
+                                <rect key="frame" x="16" y="403" width="398" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5hD-J0-XOp">
+                                <rect key="frame" x="16" y="449" width="398" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tvj-ep-cYr">
+                                <rect key="frame" x="176" y="491" width="78" height="35"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Submit"/>
+                                <connections>
+                                    <action selector="submitTap" destination="BYZ-38-t0r" eventType="touchUpInside" id="UNd-ZI-CgG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.84413243006993011" green="0.69750424208144801" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aYg-xm-VsY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2ZD-Mz-LWi"/>
+                            <constraint firstItem="aYg-xm-VsY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7MV-ey-Cuc"/>
+                            <constraint firstItem="5hD-J0-XOp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="BN6-i9-SZD"/>
+                            <constraint firstItem="5hD-J0-XOp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KQ8-II-BMq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5hD-J0-XOp" secondAttribute="trailing" constant="16" id="Qhg-e4-nba"/>
+                            <constraint firstItem="5hD-J0-XOp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gNu-R9-F78"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aYg-xm-VsY" secondAttribute="trailing" constant="16" id="kxF-ew-xie"/>
+                            <constraint firstItem="5hD-J0-XOp" firstAttribute="top" secondItem="aYg-xm-VsY" secondAttribute="bottom" constant="12" id="of8-mq-KRN"/>
+                            <constraint firstItem="Tvj-ep-cYr" firstAttribute="top" secondItem="5hD-J0-XOp" secondAttribute="bottom" constant="8" symbolic="YES" id="upS-C9-QJK"/>
+                            <constraint firstItem="Tvj-ep-cYr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z1I-DF-gQc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ViewController" id="7dA-P1-uoB"/>
+                    <connections>
+                        <outlet property="loginField" destination="aYg-xm-VsY" id="3ef-8N-6Dt"/>
+                        <outlet property="passwordField" destination="5hD-J0-XOp" id="FcN-g5-dwo"/>
+                        <outlet property="submitButton" destination="Tvj-ep-cYr" id="lsd-hX-5LA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1936.7441860465117" y="-2.5751072961373391"/>
+        </scene>
+        <!--Authorization-->
+        <scene sceneID="7SP-kP-xnD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xMp-O9-Nej" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Authorization" selectedImage="lock.icloud.fill" catalog="system" id="PL9-6d-qae">
+                        <imageReference key="image" image="lock.icloud" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dTm-gD-cc4">
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mod-ZJ-vha"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7dA-sb-o7y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1038.1395348837209" y="-2.5751072961373391"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="D8n-IK-tjm">
+            <objects>
+                <viewController id="V06-cF-eNp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NEA-dU-gTa">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="QQN-XW-oMf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" selectedImage="house.fill" id="UJP-xA-XRA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p2e-Yu-BYl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1038" y="671"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="PIf-gv-Pmy">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="CfU-nA-Izv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="e5Q-DG-5oR">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="xMp-O9-Nej" kind="relationship" relationship="viewControllers" id="R5P-yP-7TX"/>
+                        <segue destination="V06-cF-eNp" kind="relationship" relationship="viewControllers" id="Cko-iI-YpK"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QFc-de-Qbq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.53488372093022" y="-2.5751072961373391"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="lock.icloud" catalog="system" width="128" height="90"/>
+        <image name="lock.icloud.fill" catalog="system" width="128" height="90"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
