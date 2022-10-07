@@ -8,7 +8,7 @@ class AnotherViewController: UIViewController {
         super.viewDidLoad()
         
         self.title = "Catalog"
-        pageLabel.text = "Page: \(Int((navigationController?.viewControllers.count)!))"
+        pageLabel.text = "Page: \(Int((navigationController?.viewControllers.count)!) - 1)"
     }
     
     @IBAction func tapToNext(_ sender: Any) {
