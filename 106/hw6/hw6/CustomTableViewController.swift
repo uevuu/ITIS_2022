@@ -57,8 +57,6 @@ class CustomTableViewController: UIViewController, UITableViewDataSource, UITabl
 
     }
     
-
-
     private func setup() {
         view.backgroundColor = .systemGray4
         tableView.backgroundColor = .clear
@@ -104,4 +102,8 @@ class CustomTableViewController: UIViewController, UITableViewDataSource, UITabl
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         section == 0 ? "Manga" : "Anime"
     }
+    
+    func tableView( _ tableView: UITableView, heightForRowAt indexPath: IndexPath ) -> CGFloat {
+          UITableView.automaticDimension
+      }
 }
