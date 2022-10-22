@@ -20,7 +20,7 @@ class CustomTableViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell
-        var configuration = UIListContentConfiguration.cell()
+        var configuration = UIListContentConfiguration.valueCell()
         
         if indexPath.section == 0{
             let manga = mangaList[indexPath.row]
@@ -32,15 +32,14 @@ class CustomTableViewController: UIViewController, UITableViewDataSource, UITabl
             }
             
             if manga.animeAdaptation{
-                configuration.secondaryText = "Rating: \(manga.rating) / ✅ Anime adaptation"
+                configuration.secondaryText = "✅ Adaptation"
+
             }
-            else{
-                configuration.secondaryText = "Rating: \(manga.rating) / ❌ Anime adaptation"
-            }
-            
-            configuration.text = "\(manga.name)"
+            configuration.text = "\(manga.name): \(manga.rating)"
             configuration.image = UIImage(named: manga.publisherImg)
             configuration.imageProperties.maximumSize = CGSize(width: 50, height: 50)
+            configuration.textProperties.font = UIFont.systemFont(ofSize: 15)
+            configuration.secondaryTextProperties.font = UIFont.systemFont(ofSize: 10)
             cell.contentConfiguration = configuration
             cell.backgroundColor = .systemGray6
             return cell
