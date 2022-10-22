@@ -91,7 +91,8 @@ class CustomTableViewController: UIViewController, UITableViewDataSource, UITabl
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 1{
             tableView.deselectRow(at: indexPath, animated: true)
-            print(animeList[indexPath.row])
+            let anime = animeList[indexPath.row]
+            print("Title: \(anime.name)\nRating: \(anime.rating)\nStudio \(anime.studio)\nSeries:\(anime.series_out)-\(anime.series_total),\nimgName: \(anime.image)\n")
         }
     }
     
