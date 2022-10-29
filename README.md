@@ -7,3 +7,4 @@
 105. [Auto Layout, NSLayoutConstraint, UIStackView](/105)
 106. [UITableView, Layout в Table View, кастомные и базовые ячейки](/106)
 107. [UICollectionView, UICollectionViewFlowLayout, UICollectionViewCompositionalLayout](/107)
+108. [GCD, DispatchQueue, OperationQueue, URLSession, URLSessionDataTask](/108)
