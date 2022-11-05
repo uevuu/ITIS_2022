@@ -3,7 +3,6 @@ import UIKit
 class WallpaperCollectionViewCell: UICollectionViewCell{
     
     private var dataTask: URLSessionDataTask?
-//    private var mainView = UIView()
     
     private var wallpaperImageView: UIImageView = {
         let imageView = UIImageView()
@@ -78,7 +77,7 @@ class WallpaperCollectionViewCell: UICollectionViewCell{
             wallpaperImageView.topAnchor.constraint(equalTo: topAnchor, constant: 0),
             wallpaperImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0),
             wallpaperImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
-            wallpaperImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
+            wallpaperImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0)
         ])
     }
 }
