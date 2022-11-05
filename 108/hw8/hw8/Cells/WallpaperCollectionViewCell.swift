@@ -3,15 +3,16 @@ import UIKit
 class WallpaperCollectionViewCell: UICollectionViewCell{
     
     private var dataTask: URLSessionDataTask?
-
-    private let wallpaperImageView: UIImageView = {
+//    private var mainView = UIView()
+    
+    private var wallpaperImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
-    private let wallpaperLabel: UILabel = {
+    private var wallpaperLabel: UILabel = {
         let label = UILabel()
         label.text = "Wallpaper"
         label.textAlignment = .left
@@ -41,12 +42,14 @@ class WallpaperCollectionViewCell: UICollectionViewCell{
         addSubview(wallpaperLabel)
     }
     
-    func configureCell(title: String, imageName: String){
+    func configureCell(title: String, imageName: String, imageSize: CGSize){
+        self.frame.size = imageSize
         loadImage(url: URL(string: imageName)!)
         wallpaperLabel.text = title
     }
     
     private func loadImage(url: URL) {
+        wallpaperImageView.image = nil
         dataTask?.cancel()
         let urlRequest = URLRequest(
             url: url,
@@ -72,10 +75,10 @@ class WallpaperCollectionViewCell: UICollectionViewCell{
         NSLayoutConstraint.activate([
             wallpaperLabel.bottomAnchor.constraint(equalTo: wallpaperImageView.bottomAnchor, constant: -12),
             wallpaperLabel.leadingAnchor.constraint(equalTo: wallpaperImageView.leadingAnchor, constant: 12),
-            wallpaperImageView.topAnchor.constraint(equalTo: topAnchor, constant: 21),
-            wallpaperImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -21),
-            wallpaperImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            wallpaperImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            wallpaperImageView.topAnchor.constraint(equalTo: topAnchor, constant: 0),
+            wallpaperImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0),
+            wallpaperImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
+            wallpaperImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
         ])
     }
 }

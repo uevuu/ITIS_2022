@@ -39,7 +39,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             return cell
         case .wallpaper(let wallpaper):
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WallpaperCollectionViewCell", for: indexPath) as? WallpaperCollectionViewCell else {return UICollectionViewCell()}
-            cell.configureCell(title: wallpaper[indexPath.row].title, imageName: wallpaper[indexPath.row].image)
+            cell.configureCell(title: wallpaper[indexPath.row].title, imageName: wallpaper[indexPath.row].image, imageSize: wallpaper[indexPath.row].size)
             return cell
         }
     }
@@ -95,7 +95,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let section = NSCollectionLayoutSection(group: group)
         let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.05)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
         section.orthogonalScrollingBehavior = .groupPaging
-        section.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 0)
         section.boundarySupplementaryItems = [header]
         return section
     }
@@ -106,9 +105,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let group = NSCollectionLayoutGroup.vertical(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.3)), subitems: [item])
         let section = NSCollectionLayoutSection(group: group)
         let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.05)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
-        section.interGroupSpacing = 20
-        section.contentInsets = .init(top: 5, leading: 3, bottom: 5, trailing: 3)
         section.boundarySupplementaryItems = [header]
+        section.contentInsets = .init(top: 0, leading: 22, bottom: 0, trailing: 0)
         return section
     }
 }
