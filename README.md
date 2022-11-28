@@ -9,3 +9,5 @@
 107. [UICollectionView, UICollectionViewFlowLayout, UICollectionViewCompositionalLayout](/107)
 108. [GCD, DispatchQueue, OperationQueue, URLSession, URLSessionDataTask](/108)
 109. [Swift concurrency (начало), Codables](/109)
+110. [Swift concurrency (продолжение)](/110)
+111. [UserDefaults, @propertyWrapper](/111)
