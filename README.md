@@ -11,3 +11,6 @@
 109. [Swift concurrency (начало), Codables](/109)
 110. [Swift concurrency (продолжение)](/110)
 111. [UserDefaults, @propertyWrapper](/111)
+112. [FileManager, DateFormatter](/112)
+113. [Core Data, pt.1](/113)
+114. [Core Data, pt.2](/114)
