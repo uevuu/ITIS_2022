@@ -43,7 +43,27 @@ class ContactController: UITableViewController {
         }
     }
 
-    var contact: Contact?
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        update()
+    }
+
+    private func update() {
+        guard let contact else { return }
+
+        nameField.text = contact.name
+        phoneNumberField.text = contact.phoneNumber
+        bffNameLabel.text = contact.bff?.name ?? ""
+        let friends = contact.friends?.allObjects as? [Contact] ?? []
+        if friends.count > 1 || friends.isEmpty {
+            friendsLabel.text = "\(friends.count)"
+        } else if let friend = friends.first {
+            friendsLabel.text = friend.name ?? "Unknown"
+        }
+    }
+
+    var contact: Contact!
     var close: (() -> Void)?
 
     private func showContactSelector(kind: ContactSelectorController.Kind) {
@@ -58,16 +78,21 @@ class ContactController: UITableViewController {
         navigationController?.pushViewController(contactSelectorController, animated: true)
     }
 
-    @IBAction private func changeBFF() {}
+    @IBAction private func changeBFF() {
+        showContactSelector(kind: .bff)
+    }
+
     @IBAction private func changeParents() {}
+
     @IBAction private func changeChildren() {}
+
     @IBAction private func changeFriends() {
         showContactSelector(kind: .friends)
     }
 
     private func save() {
-        contact?.name = nameField.text
-        contact?.phoneNumber = phoneNumberField.text
+        contact.name = nameField.text
+        contact.phoneNumber = phoneNumberField.text
         CoreDataStack.shared.save()
         close?()
     }

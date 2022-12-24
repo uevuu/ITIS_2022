@@ -50,7 +50,13 @@ class ContactSelectorController: UIViewController, UITableViewDelegate, UITableV
         switch kind {
             case .friends:
                 selectedContacts = Set(sourceContact.friends?.allObjects as? [Contact] ?? [])
-            case .bff, .parents, .children:
+            case .bff:
+                if let bff = sourceContact.bff {
+                    selectedContacts = [ bff ]
+                } else {
+                    selectedContacts = []
+                }
+            case .parents, .children:
                 break
         }
     }
@@ -62,7 +68,9 @@ class ContactSelectorController: UIViewController, UITableViewDelegate, UITableV
         switch kind {
             case .friends:
                 saveFriends()
-            case .bff, .parents, .children:
+            case .bff:
+                saveBff()
+            case .parents, .children:
                 break
         }
         CoreDataStack.shared.save()
@@ -71,6 +79,10 @@ class ContactSelectorController: UIViewController, UITableViewDelegate, UITableV
 
     private func saveFriends() {
         sourceContact.friends = NSSet(set: selectedContacts)
+    }
+
+    private func saveBff() {
+        sourceContact.bff = selectedContacts.first
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -94,7 +106,9 @@ class ContactSelectorController: UIViewController, UITableViewDelegate, UITableV
         switch kind {
             case .friends:
                 selectFriend(at: indexPath)
-            case .children, .parents, .bff:
+            case .bff:
+                selectBff(at: indexPath)
+            case .children, .parents:
                 break
         }
     }
@@ -110,6 +124,17 @@ class ContactSelectorController: UIViewController, UITableViewDelegate, UITableV
             selectedContacts.remove(contact)
         } else {
             selectedContacts.insert(contact)
+        }
+        reload()
+    }
+
+    private func selectBff(at indexPath: IndexPath) {
+        let contact = allContacts[indexPath.row]
+
+        if selectedContacts.first == contact {
+            selectedContacts = []
+        } else {
+            selectedContacts = [ contact ]
         }
         reload()
     }
