@@ -1,8 +1,11 @@
-//
-//  ProductPresenter.swift
-//  OnlineShop
-//
-//  Created by nikita on 15.02.2023.
-//
+import UIKit
 
-import Foundation
+class ProductPresenter {
+    
+    weak var view: ProductViewController?
+
+    func loadProduct(_ product: Product){
+        view?.setProduct(product)
+    }
+    
+}

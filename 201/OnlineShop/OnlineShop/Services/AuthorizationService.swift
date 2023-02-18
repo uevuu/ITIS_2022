@@ -32,7 +32,7 @@ class MockAuthorizationService: AuthorizationService {
     }
 
     func signIn(login: String, password: String) async throws {
-        try? await Task.sleep(for: .seconds(1))
+        try? await Task.sleep(nanoseconds: 1_000_000_000)
         if !(login == "admin" && password == "qwerty") {
             _isAuthorized.value = false
             throw AuthorizationError.unauthorized
