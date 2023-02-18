@@ -18,3 +18,4 @@
 
 ## Второй семестр
 201. [Паттерны слоя представления (MVP/MVVM/VIPER), Coordinator](/201)
+202. [Dependency Injection, ServiceLocator](/202)
