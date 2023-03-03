@@ -6,8 +6,12 @@
 //
 
 import UIKit
+
+protocol CatalogView: AnyObject {
+    func showProducts(_ products: [Product])
+}
        
-class CatalogViewController: UIViewController {
+class CatalogViewController: UIViewController, CatalogView {
     
     var presenter: CatalogPresenter!
     var products: [Product] = []

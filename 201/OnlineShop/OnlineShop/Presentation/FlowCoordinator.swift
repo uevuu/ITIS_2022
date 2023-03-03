@@ -14,7 +14,6 @@ class FlowCoordinator {
         let catalogPresenter = CatalogPresenter()
         catalogVC.presenter = catalogPresenter
         catalogPresenter.view = catalogVC
-//        catalogPresenter.loadCatalog()
         navigationController = UINavigationController(rootViewController: catalogVC)
         return navigationController!
         
@@ -25,7 +24,6 @@ class FlowCoordinator {
         let catalogPresenter = ProductPresenter()
         productVC.presenter = catalogPresenter
         catalogPresenter.view = productVC
-//        catalogPresenter.loadProduct(product)
         navigationController?.pushViewController(productVC, animated: true)
     }
 }
