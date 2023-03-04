@@ -25,10 +25,4 @@ final class CatalogPresenterTest: XCTestCase {
         let result = try! await catalogService.obtainProducts()
         XCTAssertTrue(!result.isEmpty)
     }
-    
-//    func testLoadCatalog() async  {
-//        await presenter.loadCatalog()
-//        let result = await catalogView.isReloaded
-//        XCTAssertTrue(result)
-//    }
 }
