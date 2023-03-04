@@ -31,6 +31,7 @@
 		AEAF97D229B35E8D00FB4E8B /* Macaroni in Frameworks */ = {isa = PBXBuildFile; productRef = AEAF97D129B35E8D00FB4E8B /* Macaroni */; };
 		AEC04E6129B36D4D00999645 /* ImageLoader in Frameworks */ = {isa = PBXBuildFile; productRef = AEC04E6029B36D4D00999645 /* ImageLoader */; };
 		AEF88E7829AA25CB0076F3DA /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF88E7729AA25CB0076F3DA /* LoginPresenterTests.swift */; };
+		EA05DE0129B37EF50073E8D4 /* SignInPackages in Frameworks */ = {isa = PBXBuildFile; productRef = EA05DE0029B37EF50073E8D4 /* SignInPackages */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		AE6F74FE29A0F67400B17CFC /* RestConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestConfigurator.swift; sourceTree = "<group>"; };
 		AEF88E7529AA25CB0076F3DA /* OnlineShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnlineShopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF88E7729AA25CB0076F3DA /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
+		EA05DDFE29B37EBC0073E8D4 /* SignInPackages */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SignInPackages; path = ../../../SignInPackages; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEAF97D229B35E8D00FB4E8B /* Macaroni in Frameworks */,
+				EA05DE0129B37EF50073E8D4 /* SignInPackages in Frameworks */,
 				AEC04E6129B36D4D00999645 /* ImageLoader in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,6 +137,7 @@
 		AE62A6C32997C44A00276B3A = {
 			isa = PBXGroup;
 			children = (
+				EA05DDFE29B37EBC0073E8D4 /* SignInPackages */,
 				AE0BBED829B36A7B00D4EE96 /* Packages */,
 				AE62A6CE2997C44A00276B3A /* OnlineShop */,
 				AEF88E7629AA25CB0076F3DA /* OnlineShopTests */,
@@ -281,6 +285,7 @@
 			packageProductDependencies = (
 				AEAF97D129B35E8D00FB4E8B /* Macaroni */,
 				AEC04E6029B36D4D00999645 /* ImageLoader */,
+				EA05DE0029B37EF50073E8D4 /* SignInPackages */,
 			);
 			productName = OnlineShop;
 			productReference = AE62A6CC2997C44A00276B3A /* OnlineShop.app */;
@@ -755,6 +760,10 @@
 		AEC04E6029B36D4D00999645 /* ImageLoader */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ImageLoader;
+		};
+		EA05DE0029B37EF50073E8D4 /* SignInPackages */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SignInPackages;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
