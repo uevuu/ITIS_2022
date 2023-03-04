@@ -79,18 +79,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1cZ-xU-hrP">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2B1-yN-tsh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="1cZ-xU-hrP" firstAttribute="top" secondItem="2B1-yN-tsh" secondAttribute="top" id="7vD-Am-CRY"/>
+                            <constraint firstItem="1cZ-xU-hrP" firstAttribute="bottom" secondItem="2B1-yN-tsh" secondAttribute="bottom" id="ALe-uz-ras"/>
                             <constraint firstItem="iuW-gT-Rxm" firstAttribute="centerY" secondItem="dfU-4c-5cU" secondAttribute="centerY" id="L50-40-ZJS"/>
                             <constraint firstItem="iuW-gT-Rxm" firstAttribute="centerX" secondItem="dfU-4c-5cU" secondAttribute="centerX" id="MMp-1a-gtt"/>
+                            <constraint firstItem="1cZ-xU-hrP" firstAttribute="leading" secondItem="2B1-yN-tsh" secondAttribute="leading" id="QKZ-sM-ZZz"/>
+                            <constraint firstItem="1cZ-xU-hrP" firstAttribute="trailing" secondItem="2B1-yN-tsh" secondAttribute="trailing" id="UnP-Cz-wDZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="1cZ-xU-hrP" id="2dL-vS-YHr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RdV-oo-pXU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="42" y="-704"/>
+            <point key="canvasLocation" x="41.984732824427482" y="-704.22535211267609"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="vzu-A6-CyA">

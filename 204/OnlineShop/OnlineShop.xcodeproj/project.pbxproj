@@ -29,6 +29,7 @@
 		AE6F74FB29A0F22500B17CFC /* MockConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6F74FA29A0F22500B17CFC /* MockConfigurator.swift */; };
 		AE6F74FF29A0F67400B17CFC /* RestConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6F74FE29A0F67400B17CFC /* RestConfigurator.swift */; };
 		AEAF97D229B35E8D00FB4E8B /* Macaroni in Frameworks */ = {isa = PBXBuildFile; productRef = AEAF97D129B35E8D00FB4E8B /* Macaroni */; };
+		AEC04E6129B36D4D00999645 /* ImageLoader in Frameworks */ = {isa = PBXBuildFile; productRef = AEC04E6029B36D4D00999645 /* ImageLoader */; };
 		AEF88E7829AA25CB0076F3DA /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF88E7729AA25CB0076F3DA /* LoginPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		AE01A04929AA287C003DCB69 /* MockLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginView.swift; sourceTree = "<group>"; };
 		AE01A04F29AA2DBE003DCB69 /* OnlineShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnlineShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE01A05129AA2DBE003DCB69 /* OnlineShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineShopUITests.swift; sourceTree = "<group>"; };
+		AE0BBED929B36A7B00D4EE96 /* ImageLoader */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ImageLoader; path = ../ImageLoader; sourceTree = "<group>"; };
 		AE62A6CC2997C44A00276B3A /* OnlineShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlineShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE62A6CF2997C44A00276B3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE62A6D12997C44A00276B3A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEAF97D229B35E8D00FB4E8B /* Macaroni in Frameworks */,
+				AEC04E6129B36D4D00999645 /* ImageLoader in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,13 +123,23 @@
 			path = OnlineShopUITests;
 			sourceTree = "<group>";
 		};
+		AE0BBED829B36A7B00D4EE96 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				AE0BBED929B36A7B00D4EE96 /* ImageLoader */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		AE62A6C32997C44A00276B3A = {
 			isa = PBXGroup;
 			children = (
+				AE0BBED829B36A7B00D4EE96 /* Packages */,
 				AE62A6CE2997C44A00276B3A /* OnlineShop */,
 				AEF88E7629AA25CB0076F3DA /* OnlineShopTests */,
 				AE01A05029AA2DBE003DCB69 /* OnlineShopUITests */,
 				AE62A6CD2997C44A00276B3A /* Products */,
+				AEC04E5F29B36D4D00999645 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -215,6 +228,13 @@
 			path = Dependencies;
 			sourceTree = "<group>";
 		};
+		AEC04E5F29B36D4D00999645 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AEF88E7629AA25CB0076F3DA /* OnlineShopTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +280,7 @@
 			name = OnlineShop;
 			packageProductDependencies = (
 				AEAF97D129B35E8D00FB4E8B /* Macaroni */,
+				AEC04E6029B36D4D00999645 /* ImageLoader */,
 			);
 			productName = OnlineShop;
 			productReference = AE62A6CC2997C44A00276B3A /* OnlineShop.app */;
@@ -730,6 +751,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AEAF97D029B35E8D00FB4E8B /* XCRemoteSwiftPackageReference "Macaroni" */;
 			productName = Macaroni;
+		};
+		AEC04E6029B36D4D00999645 /* ImageLoader */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ImageLoader;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

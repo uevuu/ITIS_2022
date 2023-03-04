@@ -7,6 +7,7 @@
 
 import Foundation
 import Macaroni
+import ImageLoader
 
 class RestConfigurator {
     func configure() {
@@ -16,6 +17,9 @@ class RestConfigurator {
         let authorizationService = RestAuthorizationService()
         container.register { () -> AuthorizationService in
             authorizationService
+        }
+        container.register { () -> ImageLoader in
+            URLImageLoader()
         }
     }
 }

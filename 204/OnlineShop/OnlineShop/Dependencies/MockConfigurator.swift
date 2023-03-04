@@ -7,6 +7,7 @@
 
 import Foundation
 import Macaroni
+import ImageLoader
 
 class MockConfigurator {
     func configure() {
@@ -16,6 +17,9 @@ class MockConfigurator {
         let authorizationService = MockAuthorizationService()
         container.register { () -> AuthorizationService in
             authorizationService
+        }
+        container.register { () -> ImageLoader in
+            MockImageLoader()
         }
     }
 }
