@@ -30,12 +30,13 @@
 		AE6F74FD29A0F28400B17CFC /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6F74FC29A0F28400B17CFC /* ServiceLocator.swift */; };
 		AE6F74FF29A0F67400B17CFC /* RestConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6F74FE29A0F67400B17CFC /* RestConfigurator.swift */; };
 		AEF88E7829AA25CB0076F3DA /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF88E7729AA25CB0076F3DA /* LoginPresenterTests.swift */; };
+		EA04E70229B38BA3002392F9 /* CatalogPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA04E70129B38BA3002392F9 /* CatalogPresenterTest.swift */; };
 		EA6A932329B2784B00FA6378 /* CatalogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6A932229B2784B00FA6378 /* CatalogService.swift */; };
 		EA6A932529B2787F00FA6378 /* CatalogPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6A932429B2787F00FA6378 /* CatalogPresenter.swift */; };
 		EA6A932729B279B400FA6378 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6A932629B279B400FA6378 /* FlowCoordinator.swift */; };
 		EA6A932A29B27A0E00FA6378 /* ProductPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6A932929B27A0E00FA6378 /* ProductPresenter.swift */; };
 		EA6A932C29B27A2000FA6378 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6A932B29B27A2000FA6378 /* ProductViewController.swift */; };
-		EA6A932E29B2A99A00FA6378 /* CatalogPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6A932D29B2A99A00FA6378 /* CatalogPresenterTest.swift */; };
+		EA6A932E29B2A99A00FA6378 /* CatalogServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6A932D29B2A99A00FA6378 /* CatalogServiceTests.swift */; };
 		EA6A933029B2AE1800FA6378 /* MockCatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6A932F29B2AE1800FA6378 /* MockCatalogView.swift */; };
 /* End PBXBuildFile section */
 
@@ -84,12 +85,13 @@
 		AE6F74FE29A0F67400B17CFC /* RestConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestConfigurator.swift; sourceTree = "<group>"; };
 		AEF88E7529AA25CB0076F3DA /* OnlineShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnlineShopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF88E7729AA25CB0076F3DA /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
+		EA04E70129B38BA3002392F9 /* CatalogPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogPresenterTest.swift; sourceTree = "<group>"; };
 		EA6A932229B2784B00FA6378 /* CatalogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogService.swift; sourceTree = "<group>"; };
 		EA6A932429B2787F00FA6378 /* CatalogPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogPresenter.swift; sourceTree = "<group>"; };
 		EA6A932629B279B400FA6378 /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
 		EA6A932929B27A0E00FA6378 /* ProductPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPresenter.swift; sourceTree = "<group>"; };
 		EA6A932B29B27A2000FA6378 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
-		EA6A932D29B2A99A00FA6378 /* CatalogPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogPresenterTest.swift; sourceTree = "<group>"; };
+		EA6A932D29B2A99A00FA6378 /* CatalogServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogServiceTests.swift; sourceTree = "<group>"; };
 		EA6A932F29B2AE1800FA6378 /* MockCatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCatalogView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -240,7 +242,8 @@
 			children = (
 				AE01A04829AA2873003DCB69 /* Mocks */,
 				AEF88E7729AA25CB0076F3DA /* LoginPresenterTests.swift */,
-				EA6A932D29B2A99A00FA6378 /* CatalogPresenterTest.swift */,
+				EA6A932D29B2A99A00FA6378 /* CatalogServiceTests.swift */,
+				EA04E70129B38BA3002392F9 /* CatalogPresenterTest.swift */,
 			);
 			path = OnlineShopTests;
 			sourceTree = "<group>";
@@ -422,9 +425,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA04E70229B38BA3002392F9 /* CatalogPresenterTest.swift in Sources */,
 				EA6A933029B2AE1800FA6378 /* MockCatalogView.swift in Sources */,
 				AE01A04A29AA287C003DCB69 /* MockLoginView.swift in Sources */,
-				EA6A932E29B2A99A00FA6378 /* CatalogPresenterTest.swift in Sources */,
+				EA6A932E29B2A99A00FA6378 /* CatalogServiceTests.swift in Sources */,
 				AEF88E7829AA25CB0076F3DA /* LoginPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

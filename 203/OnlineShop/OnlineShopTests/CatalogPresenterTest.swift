@@ -1,8 +1,21 @@
-//
-//  CatalogPresenterTest.swift
-//  OnlineShopTests
-//
-//  Created by nikita on 04.03.2023.
-//
+import XCTest
+ @testable import OnlineShop
 
-import Foundation
+ final class CatalogPresenterTest: XCTestCase {
+     @MainActor
+     override func setUp() {
+         catalogService = MockCatalogService()
+         catalogView = MockCatalogView()
+         presenter = CatalogPresenter()
+         presenter.view = catalogView
+     }
+
+     var catalogService: MockCatalogService!
+     var catalogView: MockCatalogView!
+     var presenter: CatalogPresenter!
+
+     func testLoadCatalog() async  {
+         await presenter.loadCatalog()
+         XCTAssertTrue(catalogView.isReloaded)
+     }
+ }
