@@ -20,3 +20,4 @@
 201. [Паттерны слоя представления (MVP/MVVM/VIPER), Coordinator](/201)
 202. [Dependency Injection, ServiceLocator](/202)
 203. [Тесты](/203)
+204. [Swift Package Manager. Подключение внешних зависимостей](/204)
