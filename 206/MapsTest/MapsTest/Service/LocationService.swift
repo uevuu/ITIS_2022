@@ -7,8 +7,9 @@
 
 import Foundation
 import CoreLocation
+import Combine
 
-class LocationService {
+class LocationService: NSObject, CLLocationManagerDelegate {
     enum AuthorizationStatus {
         case needToRequest
         case granted
@@ -17,8 +18,21 @@ class LocationService {
 
     private let manager: CLLocationManager
 
-    init() {
+    override init() {
         manager = CLLocationManager()
+
+        super.init()
+        manager.delegate = self
+    }
+
+    var lastLocation: PassthroughSubject<CLLocation, Never> = .init()
+
+    func subscribeToLocation() {
+        manager.startUpdatingLocation()
+    }
+
+    func stopUpdatingLocation() {
+        manager.stopUpdatingLocation()
     }
 
     func checkAuthorization() -> AuthorizationStatus {
@@ -60,5 +74,11 @@ class LocationService {
 
     func requestLocationAccess() {
         manager.requestAlwaysAuthorization()
+    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            lastLocation.send(location)
+        }
     }
 }

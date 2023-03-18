@@ -7,6 +7,7 @@
 
 import MapKit
 import UIKit
+import Combine
 
 class ViewController: UIViewController {
     private var mapView: MKMapView!
@@ -23,11 +24,23 @@ class ViewController: UIViewController {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
 
+    private var locationSubscription: AnyCancellable?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         mapView = MKMapView()
         view.addSubview(mapView)
+
+        var locationUpdateCounter = 0
+        locationSubscription = service.lastLocation.sink { [service] location in
+            print("Updated location: \(location)")
+            locationUpdateCounter += 1
+            if locationUpdateCounter == 3 {
+                service.stopUpdatingLocation()
+            }
+        }
+        service.subscribeToLocation()
 
 //        let marker = MKMarkerAnnotationView(annotation: <#T##MKAnnotation?#>, reuseIdentifier: <#T##String?#>)
 //        mapView.addOverlay(<#T##overlay: MKOverlay##MKOverlay#>)
