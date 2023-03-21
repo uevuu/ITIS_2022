@@ -21,3 +21,5 @@
 202. [Dependency Injection, ServiceLocator](/202)
 203. [Тесты](/203)
 204. [Swift Package Manager. Подключение внешних зависимостей](/204)
+205. Контрольная работа
+206. [Apple Maps. Geolocation. Swift Package Manager pt.2](/206)

@@ -12,7 +12,6 @@ import Macaroni
 @MainActor
 class AppCoordinator {
     weak var window: UIWindow?
-    static let shared: AppCoordinator = .init()
 
     @Injected(.lazily)
     var authorizationService: AuthorizationService

@@ -9,7 +9,6 @@ import Foundation
 import Combine
 
 class RestAuthorizationService: AuthorizationService {
-    static let shared: MockAuthorizationService = .init()
 
     private var _isAuthorized: CurrentValueSubject<Bool, Never> = .init(false)
 

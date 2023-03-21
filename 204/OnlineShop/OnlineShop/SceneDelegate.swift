@@ -14,7 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
 
         let window = UIWindow(windowScene: scene)
-        let coordinator: AppCoordinator = .shared
+        let coordinator: AppCoordinator = .init()
 
         #if TESTS
         let configurator = MockConfigurator()
