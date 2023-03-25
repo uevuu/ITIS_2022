@@ -1,0 +1,11 @@
+{
+    "aps" : {
+        "alert" : {
+            "title" : "Push On Simulator",
+            "body" : "You have sent it on simulator"
+        },
+        "badge" : 7
+    },
+    "deepLink": "dltest://product?id=123",
+    "Simulator Target Bundle" : "com.github.azigangaraev.DeepLinksTest"
+}
