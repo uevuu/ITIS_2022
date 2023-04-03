@@ -23,3 +23,5 @@
 204. [Swift Package Manager. Подключение внешних зависимостей](/204)
 205. Контрольная работа
 206. [Apple Maps. Geolocation. Swift Package Manager pt.2](/206)
+207. [Push notifications. Deep links](/207)
+208. [SwiftUI. Начало](/208)
