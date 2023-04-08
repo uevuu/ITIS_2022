@@ -22,7 +22,8 @@ struct SwiftUITestApp: App {
 //                Spacer()
 //            }
 //            .background(color.colorInvert())
-            MediumTableView(people: (1...100).map { _ in .init() })
+//            MediumTableView(people: (1...100).map { _ in .init() })
+            ColoredText(text: "123")
         }
     }
 }
