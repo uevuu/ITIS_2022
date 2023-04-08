@@ -5,8 +5,7 @@ struct LoginView: View {
     @State private var username = ""
     @State private var password = ""
     @State private var showingAlert = false
-    @State private var alertTitle = ""
-    @State private var alertMessage = ""
+    @State private var isLogin = false
 
     var body: some View {
         VStack {
@@ -30,25 +29,33 @@ struct LoginView: View {
         }
         .padding()
         .background(Color.gray)
-        .alert(isPresented: $showingAlert) {
-            Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+        .alert(isLogin ? "Успех" : "Ты неудачник", isPresented: $showingAlert) {
+            if isLogin {
+                Button("Clear password") {
+                    password = ""
+                }
+                Button("Clear username") {
+                    username = ""
+                }
+                Button("Clear all") {
+                    password = ""
+                    username = ""
+                }
+            } else {
+                Button("Ok") {
+                    
+                }
+            }
         }
     }
 
     func signIn() {
-        if username.isEmpty || password.isEmpty {
-            alertMessage = "Пожалуйста, заполните все поля"
-            alertTitle = "Ошибка ввода"
-            showingAlert = true
-        } else if username == "Nikita" && password == "123" {
-            alertMessage = "Успешный вход!"
-            alertTitle = "Успех"
-            showingAlert = true
+        if username == "Nikita" && password == "123" {
+            isLogin = true
         } else {
-            alertMessage = "Такого пользователя не существует"
-            alertTitle = "Ошибка входа"
-            showingAlert = true
+            isLogin = false
         }
+        showingAlert = true
     }
 }
 
