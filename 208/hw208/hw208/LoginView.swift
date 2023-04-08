@@ -9,7 +9,6 @@ struct LoginView: View {
 
     var body: some View {
         VStack {
-            
             TextField("Username", text: $username)
                 .padding()
                 .background(Color.white)
@@ -27,7 +26,7 @@ struct LoginView: View {
             }
             Spacer()
         }
-        .padding()
+        .padding(40)
         .background(Color.gray)
         .alert(isLogin ? "Успех" : "Ты неудачник", isPresented: $showingAlert) {
             if isLogin {
@@ -43,7 +42,6 @@ struct LoginView: View {
                 }
             } else {
                 Button("Ok") {
-                    
                 }
             }
         }
