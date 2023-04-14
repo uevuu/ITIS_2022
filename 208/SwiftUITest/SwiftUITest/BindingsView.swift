@@ -43,11 +43,13 @@ struct ColoredText: View {
     }
 }
 
-struct ColoredText_Previews: PreviewProvider {
+struct ColoredText_Previews:
+    PreviewProvider {
     @State
-    static var bindingColor = Color.blue
+    static var isEnabled: Bool = false
 
     static var previews: some View {
+        CheckMarkView(isEnabled: $isEnabled)
         ColoredText(text: "Hello")
     }
 }
