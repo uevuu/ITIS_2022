@@ -25,3 +25,5 @@
 206. [Apple Maps. Geolocation. Swift Package Manager pt.2](/206)
 207. [Push notifications. Deep links](/207)
 208. [SwiftUI. Начало](/208)
+209. [SwiftUI. Data flow: ObservableObject, @ObservedObject, @State, @Binding, @Environment, @EnvironmentObject](/209)
+210. [SwiftUI. Navigation. Взаимодействие с UIKit](/210)
