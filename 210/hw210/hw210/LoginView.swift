@@ -40,15 +40,22 @@ struct LoginView: View {
             }
         }
         .fullScreenCover(isPresented: $isLogin) {
-            ContentView(isLogin: $isLogin)
+            TabView {
+                HomeView()
+                    .tabItem {
+                        Label("Home", systemImage: "house")
+                    }
+                ProfileView(name: username, isLogin: $isLogin)
+                    .tabItem {
+                        Label("Profile", systemImage: "person")
+                    }
+            }
         }
     }
 
     func signIn() {
         if username == "Nikita" && password == "123" {
             isLogin = true
-            username = ""
-            password = ""
         } else {
             showingAlert = true
         }
