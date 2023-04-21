@@ -1,3 +1,10 @@
+//
+//  LoginView.swift
+//  hw210
+//
+//  Created by Nikita Marin on 20.04.2023.
+//
+
 import SwiftUI
 
 struct LoginView: View {
@@ -26,39 +33,25 @@ struct LoginView: View {
             }
             Spacer()
         }
-        .padding(40)
+        .padding()
         .background(Color.gray)
-        .alert(isLogin ? "Успех" : "Ты неудачник", isPresented: $showingAlert) {
-            if !isLogin {
-                Button("Clear password") {
-                    password = ""
-                }
-                Button("Clear username") {
-                    username = ""
-                }
-                Button("Clear all") {
-                    password = ""
-                    username = ""
-                }
-            } else {
-                Button("Ok") {
-                }
+        .alert("Wrong username or password", isPresented: $showingAlert) {
+            Button("Ok") {
             }
+        }
+        .fullScreenCover(isPresented: $isLogin) {
+            ContentView(isLogin: $isLogin)
         }
     }
 
     func signIn() {
         if username == "Nikita" && password == "123" {
             isLogin = true
+            username = ""
+            password = ""
         } else {
-            isLogin = false
+            showingAlert = true
         }
-        showingAlert = true
     }
 }
 
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
-    }
-}
